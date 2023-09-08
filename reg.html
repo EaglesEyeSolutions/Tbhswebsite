@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Registration Form</title>
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="otp.php" method="get">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" placeholder="Enter your name" required name="name">
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" placeholder="Enter your username" required name="uname">
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" placeholder="Enter your number" required name="phonenumber">
+          </div>
+		          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" placeholder="Enter your password" required name="password">
+          	</div>
+			<div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" placeholder="Re Enter your password" required name="conpassword">
+          	</div>
+			<div class="input-box">
+            <span class="details">Role</span>
+            <select name="role">
+            <option value="director">Teaccher or Floor Manager</option>
+            <option value="Student">Student</option>
+          </select>
+          	</div>
+          	<div class="input-box">
+            <span class="details">DiceID</span>
+            <input type="text" placeholder="For Student only others 0" required name="id">
+          	</div>
+</div>	
+			   <div class="button">
+          <input type="submit" value="Register">
+        </div><br>
+        <a href='index.html'> Go To Menu</a>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

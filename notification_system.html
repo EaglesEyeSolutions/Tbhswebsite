@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fee Notification System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .option input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .class-id-input {
+            display: none;
+            padding: 5px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .option input[type="radio"]:checked + .class-id-input {
+            display: block;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #ffffff;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function toggleClassInput() {
+            const classInput = document.getElementById("class_id");
+            const specificClassRadio = document.getElementById("option2");
+
+            classInput.style.display = specificClassRadio.checked ? "block" : "none";
+        }
+    </script>
+    </head>
+    <body>
+    <div class="container">
+        <h1>Fee Notification System</h1>
+        <form action="send_notification.php" method="post">
+            <div class="option">
+                <input type="radio" name="option" value="1" id="option1" checked>
+                <label for="option1">Send to whole school</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="option" value="2" id="option2" onclick="toggleClassInput()">
+                <label for="option2">Send to specific class</label>
+                <input type="text" name="class_id" id="class_id" placeholder="Enter Class ID" class="class-id-input" style="display: none;">
+            </div>
+            <input type="submit" value="Send Notifications" class="submit-btn">
+            <div style="text-align: center; padding-top: 50px;">
+                <a href="admin.php" style="padding: 10px 20px; margin-top: 20px; text-decoration: none; background-color: #007bff; color: #fff; border-radius: 5px;">Go Back</a>
+            </div>
+        </form>
+    </div>
+    
+        
+        
+        
+    </body>
+
+</html>

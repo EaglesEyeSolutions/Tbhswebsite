@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <style>
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-size: cover;
+      font-family: sans-serif;
+    }
+    .login-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Ensuring the form is centered vertically on the page */
+    }
+    .form {
+      position: relative;
+      width: 100%;
+      max-width: 380px;
+      padding: 80px 40px 40px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      color: #fff;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    }
+    .form::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.08);
+      transform: skewX(-26deg);
+      transform-origin: bottom left;
+      border-radius: 10px;
+      pointer-events: none;
+    }
+    .form img {
+      position: absolute;
+      top: -50px;
+      left: calc(50% - 50px);
+      width: 100px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+    }
+    .form h2 {
+      text-align: center;
+      letter-spacing: 1px;
+      margin-bottom: 2rem;
+      color: white;
+    }
+    .form .input-group {
+      position: relative; /* Change 'static' to 'relative' */
+    }
+    .form .input-group input {
+      width: 100%;
+      padding: 10px 0;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      margin-bottom: 30px;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      color: inherit;
+    }
+    .form .input-group label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px 0;
+      font-size: 1rem;
+      pointer-events: none;
+      transition: 0.3s ease-out;
+    }
+    .form .input-group input:focus + label,
+    .form .input-group input:valid + label {
+      transform: translateY(-18px);
+      color: white;
+      font-size: 0.8rem;
+    }
+    .submit-btn {
+      display: block;
+      margin: 0 auto; /* Use margin: 0 auto to center the button */
+      border: none;
+      outline: none;
+      background: #ff652f;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .forgot-pw {
+      color: white; /* Change 'inherit' to 'white' */
+      text-align: center; /* Center the forgot password link */
+      margin-top: 10px; /* Add some space between the login button and the link */
+    }
+    
+    #forgot-pw {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      z-index: 1;
+      background: #fff;
+      opacity: 0;
+      transition: 0.6s;
+      pointer-events: none; /* Hide the recovery section by default */
+    }
+    #forgot-pw:target {
+      opacity: 1; /* Make the recovery section visible when targeted */
+      pointer-events: auto; /* Allow user interaction when the section is visible */
+    }
+    .close {
+      position: absolute;
+      right: 1.5rem;
+      top: 0.5rem;
+      font-size: 2rem;
+      font-weight: 900;
+      text-decoration: none;
+      color: inherit;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    /* ... Your existing styles ... */
+    .forgot-pw-link {
+      display: block;
+      text-align: center;
+      color: #fff;
+      text-decoration: none;
+      margin-top: 10px;
+      transition: color 0.3s;
+    }
+    .forgot-pw-link:hover {
+      color: #ff652f;
+    }
+    /* ... Your existing styles ... */
+  </style>
+</head>
+<body>
+    <h1 style="text-align:center">Operator login</h1>
+  <div class="login-wrapper">
+    <form action="logincheck1.php" class="form" method="get">
+      <h2>Login</h2>
+      <div class="input-group">
+        <input type="text" name="Uname" id="loginUser" required />
+        <label for="loginUser">User Name</label>
+      </div>
+      <div class="input-group">
+        <input type="password" name="Pass" id="loginPassword" required />
+        <label for="loginPassword">Password</label>
+      </div>
+      <input type="submit" value="Login" class="submit-btn" />
+      <a href="forgot_password1.php" class="forgot-pw-link">Forgot Password?</a>
+    </form>
+    <div id="forgot-pw">
+      <a href="#" class="close">&times;</a>
+      <!-- Add password recovery elements here if needed -->
+    </div>
+  </div>
+</body>
+</html>

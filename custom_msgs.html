@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom SMS Messages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Custom SMS Messages</h1>
+        <form action="send_custom_message.php" method="post">
+            <div class="form-group">
+                <label>Select Classes:</label><br>
+               
+                <input type="checkbox" name="classes[]" value="1" class="class-checkbox"> Class 1<br>
+                <input type="checkbox" name="classes[]" value="2" class="class-checkbox"> Class 2<br>
+                <input type="checkbox" name="classes[]" value="3" class="class-checkbox"> Class 3<br>
+                <input type="checkbox" name="classes[]" value="4" class="class-checkbox"> Class 4<br>
+                <input type="checkbox" name="classes[]" value="5" class="class-checkbox"> Class 5<br>
+                <input type="checkbox" name="classes[]" value="6" class="class-checkbox"> Class 6<br>
+                <input type="checkbox" name="classes[]" value="7" class="class-checkbox"> Class 7<br>
+                <input type="checkbox" name="classes[]" value="8" class="class-checkbox"> Class 8<br>
+                <input type="checkbox" name="classes[]" value="9" class="class-checkbox"> Class 9<br>
+                <input type="checkbox" name="classes[]" value="10" class="class-checkbox"> Class 10<br>
+                <input type="checkbox" name="all_classes" id="all_classes" onclick="toggleAllClasses()"> <label for="all_classes">Select All</label><br>
+
+            </div>
+            <div class="form-group">
+                <label for="message">Custom Message:</label><br>
+                <textarea name="message" rows="4" cols="40"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" style="padding: 10px 20px; margin-top: 5px; text-decoration: none; background-color: #007bff; color: #fff; border-radius: 5px;">Send SMS</button>
+            </div>
+        </form>
+        <div style="text-align: center; padding-top: 50px;">
+            <a href="javascript:history.go(-1)" style="padding: 10px 20px; margin-top: 20px; text-decoration: none; background-color: #007bff; color: #fff; border-radius: 5px;">Go Back</a>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle all class checkboxes based on the "Select All" checkbox
+        function toggleAllClasses() {
+            const allCheckbox = document.getElementById('all_classes');
+            const classCheckboxes = document.getElementsByClassName('class-checkbox');
+
+            for (let i = 0; i < classCheckboxes.length; i++) {
+                classCheckboxes[i].checked = allCheckbox.checked;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Add Font Awesome CSS for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style3.css">
+  <style>
+    /* Add custom styles here */
+    .navbar {
+      padding: 0 1rem; /* Increase the padding by 1rem (16px) on both sides */
+      height: 56px; /* Increase the height by 2px (default height is 54px) */
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+      color: #ffffff; /* Change the color to white */
+      font-size: 18px; /* Increase the font size to 18px */
+    }
+
+    @media screen and (max-width: 576px) {
+      .navbar-dark .navbar-nav .nav-link {
+        color: #000000; /* Change the color to black at responsiveness */
+      }
+    }
+
+    body {
+      background-image: url('images/imgg1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    h1 {
+      font-size: 5rem; /* Increase the font size of h1 to 5rem */
+      color: #ffffff; /* Change the color of h1 to white */
+    }
+    .footer {
+      background-color: #000; /* Black background */
+      color: #fff; /* White text color */
+      padding: 20px 0;
+      width: 100%;
+    }
+    
+    .footer p {
+      margin-bottom: 0; /* Remove default margin for paragraphs inside footer */
+    }
+
+    .footer a {
+      color: #fff; /* White link color */
+      display: block; /* Display links vertically */
+      margin-bottom: 5px; /* Add spacing between links */
+    }
+
+    .footer a i {
+      margin-right: 5px; /* Add a small gap between icon and text */
+    }
+
+    .footer .footer-links,
+    .footer .social-icons,
+    .footer .contact-info,
+    .footer .newsletter {
+      text-align: center;
+    }
+
+    .footer .footer-logo {
+      text-align: center;
+      margin-bottom: 10px; /* Add spacing between logo and other sections */
+    }
+
+    .footer .footer-logo img {
+      max-width: 100px; /* Set a maximum width for the logo */
+    }
+
+    .footer .newsletter input[type="email"] {
+      width: 100%;
+      max-width: 250px; /* Set a maximum width for the email input */
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .footer .newsletter button {
+      margin-top: 10px; /* Add spacing between input and button */
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <!-- Add your logo or text here -->
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="aboutus.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="reg.html">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Student Info Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="youtubevedio.php">Events</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1 class="h3">The Brilliants High School</h1> <!-- Used "h3" class to reduce font size -->
+        <div>
+          <a href="home.html" class="btn btn-primary btn-lg">Finance System Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+   <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <!-- Footer Logo -->
+        <!-- Footer Links -->
+        <div class="col-md-2 footer-links">
+          <a href="#">Home</a>
+          <a href="aboutus.html">About</a>
+          <a href="#">visitWebsite</a>
+          <a href="#">Contact</a>
+        </div>
+        <!-- Social Icons -->
+        <div class="col-md-3 social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+          <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+          <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+        </div>
+        <!-- Contact Information -->
+        <div class="col-md-3 contact-info" width='200px'>
+          <p><i class="fas fa-phone"></i>Company Name:Dannana Ramu</p>
+          <p><i class="fas fa-phone"></i> +91-8897371123</p>
+          <p><i class="fas fa-envelope"></i> dhannanaramu2002@gmail.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> Vijayawada,AP</p>
+        </div>
+      </div>
+      <!-- Newsletter Section -->
+      <div class="row newsletter">
+        <div class="col-md-12">
+          <h4>Subscribe to our Newsletter</h4>
+          <p>Get updates and special offers</p>
+          <form>
+            <input type="email" placeholder="Your Email Address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Include Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
